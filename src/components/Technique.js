@@ -1,7 +1,8 @@
 import React from 'react';
+import ReactTooltip from 'react-tooltip'
 import Media from "react-media";
 import Divider from 'material-ui/Divider';
-import { List, ListItem } from 'material-ui';
+import { ListItem } from 'material-ui';
 import Paper from 'material-ui/Paper';
 import { grey100 } from 'material-ui/styles/colors';
 
@@ -27,9 +28,11 @@ let pictureWidth= '55%';
 export class Technique extends React.Component {
     render() {
         const information = this.props.information;
-        const instructions = information.instructions.map((instruction,index) => <ListItem key={index} primaryText={instruction} style={instructionStyle}/>);
+        //const instructions = information.instructions.map((instruction,index) => <ListItem key={index} primaryText={instruction} style={instructionStyle}/>);
+        const instructions = information.instructions.map((instruction,index) => <ListItem key={index} style={instructionStyle}>{instruction}</ListItem>);
         return (
             <div className="technique">
+            <ReactTooltip className="tooltip" type="warning"/>
             <Media query="(max-width: 1100px)">
             {matches =>
             matches ? (
@@ -54,9 +57,9 @@ export class Technique extends React.Component {
                 <br/>
                 <Divider/>
                 <h3 className="rosy">Basic Instructions</h3>
-                <List>
+                {/* <List> */}
                     {instructions}
-                </List>
+                {/* </List> */}
                 <Divider/>
                 <h3 className="rosy">A Good Source</h3>
                 <div className="image">

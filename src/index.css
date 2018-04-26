@@ -66,6 +66,26 @@ h1, h2, h3 {
   border-radius: 3%
 }
 
+.tooltipTrigger {
+  text-decoration: none;
+  font-size: 110%;
+  font-weight: bold;
+  color: #EDAB4D;
+}
+
+.tooltip {
+  font-family: 'Montserrat';
+  font-size: 100%;
+  background-color: rgb(214, 24, 88) !important;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 110%;
+  font-weight: bold;
+  color: blueviolet;
+}
+
 .grow {
   -webkit-filter: grayscale(100%);
 	-webkit-transform: scale(1);
