@@ -63,7 +63,7 @@ export class Technique extends React.Component {
                 <Divider/>
                 <h3 className="rosy">A Good Source</h3>
                 <div className="image">
-                <a href={information.authorLink}>
+                <a rel="noopener noreferrer" target="_blank" href={information.authorLink}>
                 <img className="picture grow" src={information.picture} alt="A spiritual looking person" width= {pictureWidth}/>
                 </a>
                 <h3 className="textOnImage"><span className="spanOnImage">{information.quoteAuthor}</span></h3>
